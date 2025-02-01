@@ -1,7 +1,7 @@
 /* Root CSS Variables */
 :root {
     --primary-color: #0f2905;
-    --secondary-color: #AAAE7F;
+    --secondary-color: #d7dd99;
     --accent-color: #022314;
     --text-color: #05311a;
     --light-text-color: #e8fbf7;
@@ -18,19 +18,36 @@ body {
 
 /* Header Styles */
 header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
     background-color: var(--secondary-color);
     border-bottom: 2px solid var(--accent-color);
     padding: 20px;
-    text-align: center;
 }
+
 header img {
     width: 200px;
 }
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
 nav a {
-    margin: 0 10px;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
 }
 
 /* Hero Section */
@@ -78,30 +95,61 @@ nav a {
     height: auto;
 }
 
-/* Section Styles */
-section {
+/* History Section */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     padding: 20px;
-    margin: 20px 0;
 }
-section img {
-    margin: 10px;
-    border-radius: 8px;
-    width: 150px;
+
+/* Adventures Section */
+.adventures {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+}
+
+.adventures figure {
+    text-align: center;
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 /* Footer Styles */
 footer {
+    display: flex;
+    justify-content: flex-end;
     background-color: var(--secondary-color);
     border-top: 2px solid var(--accent-color);
     padding-top: 15px;
     text-align: center;
+    align-items: center;
 }
+
 footer p {
     margin: 10px 0;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 10px;
 }
 
 .sociallinks a {
-    margin: 0 10px;
     text-decoration: none;
 }
 
